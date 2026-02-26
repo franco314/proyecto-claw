@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.15",
+    "lastTouchedAt": "2026-02-20T00:11:33.984Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-20T00:11:33.960Z",
+    "lastRunVersion": "2026.2.15",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "env": {
+    "OPENCODE_API_KEY": "sk-eGtSqFLxezd2cjAujhfcf3UQdn0hEoh65UnJhR30Iudc7WHzeOBQK9HUdkwepd0C",
+    "OPENROUTER_API_KEY": "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"
+  },
+  "auth": {
+    "profiles": {
+      "opencode:default": {
+        "provider": "opencode",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "opencode/big-pickle"
+      },
+      "models": {
+        "opencode/big-pickle": {},
+        "opencode/glm-5-free": {},
+        "opencode/kimi-k2-5-free": {}
+      },
+      "workspace": "C:\\Users\\rolda\\clawd",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "15m",
+        "keepLastAssistants": 3
+      },
+      "compaction": {
+        "mode": "default"
+      },
+      "maxConcurrent": 1,
+      "subagents": {
+        "maxConcurrent": 2
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "peluquero",
+        "name": "peluquero",
+        "workspace": "C:\\Users\\rolda\\clawd-peluquero",
+        "agentDir": "C:\\Users\\rolda\\.openclaw\\agents\\peluquero\\agent",
+        "model": "opencode/big-pickle"
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "peluquero",
+      "match": {
+        "channel": "whatsapp",
+        "accountId": "peluquero"
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "dmPolicy": "allowlist",
+      "selfChatMode": true,
+      "allowFrom": [
+        "+5491169265514"
+      ],
+      "groupPolicy": "disabled",
+      "debounceMs": 2500,
+      "mediaMaxMb": 25
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "f7ce56578e5b2d73d7f61628906230d55fc3f7f49a99d2ec"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "load": {},
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "whatsapp": {
+        "enabled": true
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "23210eb3-5a94-4131-9d5d-992b01d4d099",
+      "agentId": "peluquero",
+      "name": "turnobot-scan",
+      "enabled": false,
+      "createdAtMs": 1771294957577,
+      "updatedAtMs": 1771295230927,
+      "schedule": {
+        "everyMs": 3600000,
+        "kind": "every",
+        "anchorMs": 1771295149715
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Escaneá los últimos mensajes de WhatsApp del account peluquero usando openclaw message read --channel whatsapp --account peluquero --limit 20 --json. Analizá si hay acuerdos de turnos nuevos que no estén en data/turnos.json. Si encontrás uno, registralo y notificá por selfChat."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1771294987608,
+        "lastStatus": "ok",
+        "lastDurationMs": 167983,
+        "consecutiveErrors": 0
+      }
+    }
+  ]
+}

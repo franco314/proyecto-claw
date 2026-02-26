@@ -1,0 +1,51 @@
+# --- SEGURIDAD Y CREDENCIALES (CRÍTICO) ---
+.env
+.env.local
+.env.*
+*.pem
+*.key
+id_rsa
+secrets.json
+
+# --- DEPENDENCIAS (No se suben, se instalan en cada entorno) ---
+node_modules/
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# --- ARCHIVOS DE COMPILACIÓN Y LOGS ---
+dist/
+build/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# --- CONFIGURACIÓN DE IDE (OPCIONAL PERO RECOMENDADO) ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+#
+# --- PROYECTO CLAW: DATOS SENSIBLES / RUNTIME ---
+credentials/
+identity/
+logs/
+memory/
+#
+# --- PROYECTO CLAW: PERFILES DE NAVEGADOR Y SESIONES ---
+browser/openclaw/user-data/
+agents/*/agent/auth-profiles.json
+agents/*/sessions/
+#
+# --- ARCHIVOS ESPECIALES DE WINDOWS ---
+nul
+#
+# --- PROYECTO CLAW: DATOS EN TIEMPO DE EJECUCIÓN / PERSONALES ---
+.claude/
+cron/runs/
+delivery-queue/
+devices/paired.json
+devices/pending.json
+media/inbound/
