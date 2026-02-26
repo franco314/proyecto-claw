@@ -49,3 +49,7 @@ delivery-queue/
 devices/paired.json
 devices/pending.json
 media/inbound/
+#
+# --- PROYECTO CLAW: CONFIG LOCAL (NO COMMITEAR) ---
+openclaw.json
+openclaw.json.bak*

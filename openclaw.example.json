@@ -4,8 +4,8 @@
     "lastTouchedAt": "2026-02-23T22:14:03.445Z"
   },
   "env": {
-    "OPENCODE_API_KEY": "sk-eGtSqFLxezd2cjAujhfcf3UQdn0hEoh65UnJhR30Iudc7WHzeOBQK9HUdkwepd0C",
-    "OPENROUTER_API_KEY": "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"
+    "OPENCODE_API_KEY": "YOUR_OPENCODE_API_KEY_HERE",
+    "OPENROUTER_API_KEY": "YOUR_OPENROUTER_API_KEY_HERE"
   },
   "wizard": {
     "lastRunAt": "2026-02-20T00:11:33.960Z",
@@ -105,7 +105,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "f7ce56578e5b2d73d7f61628906230d55fc3f7f49a99d2ec"
+      "token": "CHANGE_ME_GATEWAY_TOKEN"
     },
     "tailscale": {
       "mode": "off",
