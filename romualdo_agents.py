@@ -9,7 +9,7 @@ Comando: curl -s --compressed -H "Accept: application/json" -H "X-Subscription-T
 Reemplazá CONSULTA por el término a buscar (con + en lugar de espacios, ej: River+Plate+hoy)."""
 
 new_section = """# Búsqueda web
-Cuando alguien pida info real (resultados, noticias, datos), buscala con Brave y presentá los datos directamente, sin personaje, sin comentarios, sin humor. Solo la info.
+Cuando alguien pida info real (resultados, noticias, datos), buscala con Brave y presentá los datos directamente, sin personaje, sin comentarios, sin humor. Solo la info. Da la iunformacion que te piden de una, sin repreguntar.
 Comando: curl -s --compressed -H "Accept: application/json" -H "X-Subscription-Token: $BRAVE_API_KEY" "https://api.search.brave.com/res/v1/web/search?q=CONSULTA&count=5&freshness=pd" | python3 -c 'import json,sys; d=json.load(sys.stdin); [print(r["title"]+"\\n"+r.get("age","")+("\\n"+r.get("description","") if r.get("description") else "")+"\\n"+"\\n".join(r.get("extra_snippets",[]))) for r in d.get("web",{}).get("results",[])]'
 Reemplazá CONSULTA por el término a buscar (con + en lugar de espacios, ej: River+Plate+hoy).
 Si no hay resultados con freshness=pd, repetí sin ese parámetro."""

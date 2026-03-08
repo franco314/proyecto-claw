@@ -1,4 +1,4 @@
-INSTRUCCIÓN CRÍTICA: Jamás escribas razonamiento, pasos intermedios, ni análisis previo en tus mensajes. Tu output debe ser ÚNICAMENTE la respuesta final. Si pensás algo, no lo escribas.
+
 
 # Servidor
 Hetzner CAX11, Ubuntu 24.04, 4GB RAM. OpenClaw como servicio systemd.
@@ -15,11 +15,12 @@ Reemplazá CONSULTA por el término a buscar (con + en lugar de espacios, ej: Ri
 Si los resultados que traés no responden la pregunta, decilo claramente en lugar de inventar.
 
 # Clima
-Para consultas de clima o temperatura, ejecuta este comando directamente sin preguntar:
-curl -s "wttr.in/Villa+Urquiza,Buenos+Aires?format=%l:+%c+%t+(sensacion+%f),+viento+%w,+humedad+%h"
-Para el pronóstico de mañana: curl -s "wttr.in/Villa+Urquiza,Buenos+Aires?1"
-Para otra ciudad: curl -s "wttr.in/CIUDAD?format=%l:+%c+%t"
-NO digas que no tenés acceso a la herramienta. Ejecutá el curl directamente.
+Para consultas de clima o temperatura, usa solo exec con los scripts del skill weather.
+Hoy o sin especificar: bash skills/weather/scripts/today.sh
+Para el pronostico de manana: bash skills/weather/scripts/tomorrow.sh
+Para otra ciudad: bash skills/weather/scripts/tomorrow.sh "CIUDAD"
+NUNCA muestres el comando al usuario. Ejecutalo y responde solo con la salida final.
+Si el script devuelve WEATHER_ERROR, responde: No pude consultar el clima ahora, proba en unos minutos.
 
 # Memoria
 Leer memory/YYYY-MM-DD.md (hoy y ayer) antes de responder sobre contexto previo.

@@ -2,31 +2,61 @@
   "version": 1,
   "jobs": [
     {
-      "id": "23210eb3-5a94-4131-9d5d-992b01d4d099",
-      "agentId": "peluquero",
-      "name": "turnobot-scan",
-      "enabled": false,
-      "createdAtMs": 1771294957577,
-      "updatedAtMs": 1771295230927,
+      "id": "06d08139-1233-4e01-a626-a7d2ab9ee723",
+      "agentId": "romualdo",
+      "name": "reset-romualdo",
+      "enabled": true,
+      "createdAtMs": 1772069418211,
+      "updatedAtMs": 1772400370243,
       "schedule": {
-        "everyMs": 3600000,
         "kind": "every",
-        "anchorMs": 1771295149715
+        "everyMs": 3600000,
+        "anchorMs": 1772069418211
       },
-      "sessionTarget": "isolated",
+      "sessionTarget": "main",
       "wakeMode": "now",
       "payload": {
-        "kind": "agentTurn",
-        "message": "Escaneá los últimos mensajes de WhatsApp del account peluquero usando openclaw message read --channel whatsapp --account peluquero --limit 20 --json. Analizá si hay acuerdos de turnos nuevos que no estén en data/turnos.json. Si encontrás uno, registralo y notificá por selfChat."
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "last"
+        "kind": "systemEvent",
+        "text": "session.reset"
       },
       "state": {
-        "lastRunAtMs": 1771294987608,
+        "nextRunAtMs": 1772403970240,
+        "lastRunAtMs": 1772400370240,
+        "lastRunStatus": "skipped",
+        "lastStatus": "skipped",
+        "lastDurationMs": 3,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "lastError": "disabled"
+      }
+    },
+    {
+      "id": "4fb44a0c-a355-4c48-9a19-f06da49664dc",
+      "agentId": "main",
+      "name": "reset-main",
+      "enabled": false,
+      "createdAtMs": 1772138791855,
+      "updatedAtMs": 1772214394969,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 3600000,
+        "anchorMs": 1772138791855
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "session.reset"
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "lastRunAtMs": 1772214392045,
+        "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 167983,
+        "lastDurationMs": 2924,
+        "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0
       }
     }

@@ -68,7 +68,8 @@
     }
   ],
   "messages": {
-    "ackReactionScope": "group-mentions"
+    "ackReactionScope": "group-mentions",
+    "suppressToolErrors": true
   },
   "commands": {
     "native": "auto",
